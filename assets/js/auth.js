@@ -24,7 +24,10 @@ const handleSignup = (event) => {
                     body: JSON.stringify(info),
                 })
                     .then((response) => response.json())
-                    .then((data) => console.log(data))
+                    .then((data) => {
+                        console.log(data)
+                        window.location.href = "login.html";
+                    })
 
             } catch (err) {
                 console.log(err.message)

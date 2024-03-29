@@ -56,5 +56,6 @@ const loadAllAppointment = () => {
                 parent.appendChild(tr)
             });
         })
+        .catch(error => console.error('Error:', error));
 }
 loadAllAppointment()
