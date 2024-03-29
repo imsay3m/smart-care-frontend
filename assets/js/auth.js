@@ -67,6 +67,7 @@ const handleLogin = (event) => {
                         .then((data) => {
                             if (data && data.length > 0 && data[0].id) {
                                 localStorage.setItem("patient_id", data[0].id);
+                                window.location.href = "index.html";
                             } else {
                                 // If patient not found, create a new patient
                                 fetch("https://testing-8az5.onrender.com/patient/list/", {
