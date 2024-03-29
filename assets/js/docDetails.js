@@ -206,6 +206,7 @@ const handleAppointment = () => {
 
 const loadPatient = () => {
     const user_id = localStorage.getItem("user_id")
+    
     fetch(`https://testing-8az5.onrender.com/patient/list/?user_id=${user_id}`)
         .then(response => response.json())
         .then((data) => {
